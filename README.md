@@ -16,8 +16,7 @@ In this post I will walk you through a process using Natural Language Processing
 
 ***Define the Problem***
 
-As you may have guessed I was tasked with using machine learning to do what you just tried to do above! In other words, creating a classification model that can distinguish which of two subreddits a post belongs to.
-The assumption for this problem is that a disgruntled, Reddit back-end developer went into every post and replaced the subreddit field with “(·̿̿Ĺ̯̿̿·̿ ̿)”. As a result, none of the subreddit links will populate with posts until the subreddit fields of each post are re-assigned.
+Creating a classification model that can distinguish which of two subreddits a post belongs to.
 
 As you may have gathered, posts in Star War and Star Trek will definitely have a lot of crossover. Whether you’re boldly going where no man has gone before or you’re already in a galaxy far, far away, you’ve probably heard the age-old debate about which of science fiction’s two biggest franchises is better. Geeks, freaks, scientists and even casual fans have long been arguing in every corner of the galaxy about Star Wars and Star Trek. Which is better and why?
 
@@ -25,7 +24,7 @@ I like a challenge so I purposely picked two closely-related subreddits as I wan
 
 ***Gather & Clean the Data***
 
-My data acquisition process involved using the requests library to loop through requests to pull data using Reddit’s API which was not pretty straightforward.I filtered those datas through coding so that i can get the valuable data. To get posts from Star Wars, all I had to do was add .json to the end of the url. Reddit only provides 25 posts per request and I wanted 1000 so I iterated through the process 10 times. 
+My data acquisition process involved using the requests library to loop through requests to pull data using Reddit’s API which was not pretty straightforward.I filtered those datas through coding so that i can get the valuable data. To get posts from Star Wars, all I had to do was add .json to the end of the url. Reddit only provides 500 posts per request and I wanted 1000 so I iterated through the process 10 times. 
 
 My for loop outputted a list of nested json dictionaries of which I indexed to pull out my desired features, Post Text and Title, while simultaneously adding them to two Pandas DataFrames one for Star War-related posts and the other for Star Trek related posts.
 
